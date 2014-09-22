@@ -1,0 +1,63 @@
+/* 
+    Document   : tab-slider-styles
+    Created on : May 13, 2013, 12:17:47 PM
+    Author     : grickaby
+    Description: This is used to style the Tab Slider.
+*/
+
+#tab-slider {
+    width:700px;
+    height:400px;
+    margin: 0 auto;
+    position:relative;
+    overflow:hidden;
+    border:1px solid #555;
+      background-color: white;
+  background:rgba(255,255,255, 0.85);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.tab-content {
+    padding:7px;
+    height:386px;
+    width:686px;
+    overflow:auto;
+    float: left;
+}
+ul.tab-nav {
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    background-color:#555;
+    width:100%;
+}
+ul.tab-nav li {
+    padding:0;
+    margin:0 0 0 -4px;
+    display:inline;
+    border-right:1px solid #555;
+    
+}
+ul.tab-nav li:first-child {
+    margin-left:0;
+}
+ul.tab-nav li:hover {
+    background-color: #ebebeb;
+}
+ul.tab-nav li a {
+    color:#fff;
+    padding:0 20px;
+}
+ul.tab-nav li a:hover {
+    color:#000;
+}
+ul.tab-nav li.active {
+    background-color: #FCFAFA;
+    border-bottom:none;
+}
+ul.tab-nav li.active a {
+    color:#555;
+}
