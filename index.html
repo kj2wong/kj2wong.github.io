@@ -7,23 +7,94 @@
     <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
     <link rel="icon" href="files/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tab-slider-style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.tab-slider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('div.next a').bind('click',function(event){
+                var $anchor = $(this);
+                
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500,'easeInOutExpo');
+                /*
+                if you don't want to use the easing effects:
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1000);
+                */
+                event.preventDefault();
+            });
+        });
+    </script>
   </head>
 
   <body>
-    <h1>Kevin Jordan Wong</h1>
-    <h2>Data Mining. Machine Learning. Computer Security.</h2>
-    
-    <nav>
-      <ul class="nav">
-        <li><a target="_blank" href="files/resume.pdf" class="icon-doc-text" style="text-decoration: none"></a></li>
-        <li><a target="_blank" href="https://github.com/kj2wong" class="icon-github" style="text-decoration: none"></a></li>
-        <li><a target="_blank" href="https://www.linkedin.com/in/kj2wong" class="icon-linkedin" style="text-decoration: none"></a></li>
-      </ul>
-    </nav>
-    <br><br><br>
+    <div id="main">
+      <h1>Kevin Jordan Wong</h1>
+      <h2>Data Mining. Machine Learning. Computer Security.</h2>
+      
+      <nav>
+        <ul class="nav">
+          <li><a target="_blank" href="files/resume.pdf" class="icon-doc-text" style="text-decoration: none"></a></li>
+          <li><a target="_blank" href="https://github.com/kj2wong" class="icon-github" style="text-decoration: none"></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/kj2wong" class="icon-linkedin" style="text-decoration: none"></a></li>
+        </ul>
+      </nav>
+      <div class="next">
+        <a href="#info">More</a>
+      </div>
+    </div>
+    <div id="info">
+      <div class="next">
+        <a href="#main">Back</a>
+      </div>
+      <div id="tab-slider">
+        <div class="tab-nav">
+           <ul class="tab-nav">
+               <li class="tab active"><a class="tab-link" href="#about" rel="1">About</a></li>
+               <li class="tab"><a class="tab-link" href="#work" rel="2">Work</a></li>
+               <li class="tab"><a class="tab-link" href="#projects" rel="3">Projects</a></li>
+               <li class="tab"><a class="tab-link" href="#coursework" rel="4">Coursework</a></li>
+           </ul>
+        </div>
+        <div class="tab-main-content">
+           <div class="tab-slider-wrapper">
+               <div class="tab-content" id="about">
+                   Section 1
+               </div>
+               <div class="tab-content" id="work">
+                   Section 2
+               </div>
+               <div class="tab-content" id="projects">
+                   Section 3
+               </div>
+               <div class="tab-content" id="coursework">
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+                   Section 4 <br> Hello world <br>
+               </div>
+           </div>
+       </div>
+    </div>
+    </div>
   
+    <!--
     <div id="copyright">
       Kevin Jordan Wong &#169 2014 All rights reserved
     </div>
+  -->
   </body>
 </html>
